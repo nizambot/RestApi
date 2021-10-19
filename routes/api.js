@@ -139,7 +139,7 @@ loghandler = {
     }
 }
 
-const listkey = ["PsycoBot", "GratisanMuluAnjing"];
+const listkey = ["PsycoBot", "PsycoBot"];
 //router.use(favicon(__path + "/views/logo.ico"));
 
 var len = 15
@@ -203,7 +203,7 @@ router.get('/addapikey', (req, res, next) => {
 
     if (!apikey) return res.json(loghandler.notparam)
     if (!(status && apikeyInput && email && nomorhp && name && age && country && exp)) return res.json(loghandler.notAddApiKey)
-    if (apikey != 'GratisanMuluAnjing') return res.json(loghandler.invalidKey)
+    if (apikey != 'PsycoBot') return res.json(loghandler.invalidKey)
 
     try {
         zahirr.insert({
@@ -242,7 +242,7 @@ router.get('/remove', (req, res, next) => {
 
     if (!apikey) return res.json(loghandler.notparam)
     if (!(status && apikeyInput && email && nomorhp && name && age && country && exp)) return res.json(loghandler.notAddApiKey)
-    if (apikey != 'GratisanMuluAnjing') return res.json(loghandler.invalidKey)
+    if (apikey != 'PsycoBot') return res.json(loghandler.invalidKey)
 
     try {
         zahirr.remove({
